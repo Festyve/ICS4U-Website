@@ -1,0 +1,662 @@
+/* 
+ * Author: Michael Zhang
+ * Date: 2024/11/19
+ * CSS Stylesheet for the website
+ *
+ * Challenge Features: 
+ * - Include an element that moves down as the user scrolls down
+ * - Mouseover effects
+ */
+
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* 
+ * =====================================================
+ * Reset and Base Styles
+ * =====================================================
+ */
+
+/* Reset margin, padding, and set box-sizing for all elements */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Base styles for the body */
+body {
+  font-family: 'Poppins', sans-serif; /* Set the default font family */
+  line-height: 1.6; /* Set line height for better readability */
+  background: #f8fafc; /* Light background color */
+  color: #1f2937; /* Dark text color for contrast */
+}
+
+/* 
+ * =====================================================
+ * Navigation
+ * =====================================================
+ */
+
+/* Main navigation bar styling */
+.main-nav {
+  position: fixed; /* Fix the nav to the top of the viewport */
+  width: 100%; /* Make the nav span the full width */
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  z-index: 1000; /* Ensure the nav stays above other elements */
+}
+
+/* Container for navigation content */
+.nav-content {
+  max-width: 1200px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 1rem 2rem; /* Add padding for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and navigation links */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem; /* Set font size for the logo */
+  font-weight: 700; /* Make the logo text bold */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Apply a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text (for WebKit browsers) */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the background gradient */
+  text-decoration: none; /* Remove underline from the logo link */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Logo hover effect */
+.logo:hover {
+  color: #1d4ed8; /* Change text color on hover */
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex; /* Use flexbox to layout the links */
+  gap: 1rem; /* Add space between each link */
+}
+
+/* Individual navigation link styling */
+.nav-links a {
+  color: #4b5563; /* Set link color */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 500; /* Set medium font weight */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+  padding: 0.5rem 1rem; /* Add padding for clickable area */
+  border-radius: 0.5rem; /* Round the corners of the links */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Navigation link hover and active states */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb; /* Change text color on hover or when active */
+  background: rgba(37, 99, 235, 0.1); /* Add a light background on hover or when active */
+}
+
+/* Pseudo-element for underline effect on navigation links */
+.nav-links a::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning relative to the link */
+  bottom: -4px; /* Position the pseudo-element below the link */
+  left: 0; /* Align to the left */
+  width: 0; /* Initial width set to 0 */
+  height: 2px; /* Height of the underline */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for the underline */
+  transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+
+/* Expand the underline on hover */
+.nav-links a:hover::after {
+  width: 100%; /* Expand the underline to full width */
+}
+
+/* 
+ * =====================================================
+ * Hero Sections
+ * =====================================================
+ */
+
+/* Common styles for hero and hero-cs sections */
+.hero, .hero-cs {
+  padding: 8rem 2rem 4rem; /* Top, sides, and bottom padding */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(236, 72, 153, 0.1)); /* Light gradient background */
+  min-height: 100vh; /* Ensure the hero section covers at least the full viewport height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center child elements vertically */
+  align-items: center; /* Center child elements horizontally */
+  text-align: center; /* Center text within the hero section */
+}
+
+/* Hero section heading */
+.hero h1 {
+  font-size: 3.5rem; /* Large font size for the heading */
+  margin-bottom: 1.5rem; /* Space below the heading */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for the text */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+}
+
+/* Hero section paragraph */
+.hero p {
+  font-size: 1.25rem; /* Font size for the paragraph */
+  color: #6b7280; /* Paragraph text color */
+  max-width: 600px; /* Maximum width for the paragraph for better readability */
+  margin: 0 auto; /* Center the paragraph horizontally */
+  margin-bottom: 3rem; /* Space below the paragraph */
+}
+
+/* Hero Sources Section */
+.hero-sources {
+  padding: 8rem 2rem 4rem; /* Top, sides, and bottom padding */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(236, 72, 153, 0.1)); /* Light gradient background */
+  min-height: 40vh; /* Minimum height for the section */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center child elements vertically */
+  align-items: center; /* Center child elements horizontally */
+  text-align: center; /* Center text within the section */
+}
+
+/* Hero Sources heading */
+.hero-sources h1 {
+  font-size: 3.5rem; /* Large font size for the heading */
+  margin-bottom: 1.5rem; /* Space below the heading */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+}
+
+/* 
+ * =====================================================
+ * Fields Grid
+ * =====================================================
+ */
+
+/* Container for the fields grid */
+.fields-grid {
+  max-width: 1200px; /* Maximum width of the grid container */
+  margin: 0 auto; /* Center the grid container horizontally */
+  padding: 4rem 2rem; /* Top/bottom and side padding */
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+  gap: 2rem; /* Gap between grid items */
+}
+
+/* Individual field card styling */
+.field-card {
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: space-between; /* Space out child elements */
+  background: #ffffff; /* White background for the card */
+  padding: 2rem; /* Padding inside the card */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Field card hover effect */
+.field-card:hover {
+  transform: translateY(-5px); /* Move the card slightly upward on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+/* Field card heading */
+.field-card h3 {
+  font-size: 1.4rem; /* Font size for the heading */
+  margin-bottom: 1rem; /* Space below the heading */
+  color: #1f2937; /* Heading text color */
+}
+
+/* Field card paragraph */
+.field-card p {
+  color: #6b7280; /* Paragraph text color */
+  margin-bottom: 1.5rem; /* Space below the paragraph */
+  flex-grow: 1; /* Allow the paragraph to take up remaining space */
+}
+
+/* 
+ * =====================================================
+ * Career Paths Section
+ * =====================================================
+ */
+
+/* Container for the career paths section */
+.career-paths {
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 4rem auto; /* Center the container with top and bottom margin */
+  padding: 0 2rem; /* Side padding */
+}
+
+/* Grid layout for career paths */
+.path-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns that fit at least 300px */
+  gap: 2rem; /* Gap between grid items */
+  margin-top: 2rem; /* Space above the grid */
+}
+
+/* Individual path card styling */
+.path-card {
+  background: #ffffff; /* White background for the card */
+  padding: 2rem; /* Padding inside the card */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Path card hover effect */
+.path-card:hover {
+  transform: translateY(-5px); /* Move the card slightly upward on hover */
+}
+
+/* 
+ * =====================================================
+ * Definition Section
+ * =====================================================
+ */
+
+/* Common styles for multiple sections: definition, education, experience, job, day-in-life, overview */
+.definition, .education, .experience, .job, .day-in-life, .overview {
+  max-width: 1200px; /* Maximum width of the sections */
+  margin: 4rem auto; /* Center the sections with top and bottom margin */
+  padding: 2rem; /* Padding inside each section */
+  background: #ffffff; /* White background */
+  border-radius: 1.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings for the definition, education, experience, job, day-in-life, and overview sections */
+.definition h2, .education h2, .experience h2, .job h2, .day-in-life h2, .overview h2 {
+  font-size: 2.5rem; /* Large font size for headings */
+  font-weight: 700; /* Bold font weight */
+  margin-bottom: 2rem; /* Space below the headings */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for text */
+  -webkit-background-clip: text; /* Clip the background to the text (for WebKit browsers) */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  text-align: center; /* Center the text */
+}
+
+/* 
+ * =====================================================
+ * Salaries Section
+ * =====================================================
+ */
+
+/* Container for the salaries section */
+.salaries {
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 4rem auto; /* Center the container with top and bottom margin */
+  padding: 2rem; /* Padding inside the container */
+  background: #ffffff; /* White background */
+  border-radius: 1.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Salaries section heading */
+.salaries h2{
+  font-size: 2.5rem; /* Large font size for the heading */
+  font-weight: 700; /* Bold font weight */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for text */
+  -webkit-background-clip: text; /* Clip the background to the text (for WebKit browsers) */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+}
+
+/* Container for the salary graph */
+.salary-graph {
+  border-radius: 1rem; /* Rounded corners */
+  padding: 2rem; /* Padding inside the graph container */
+  margin-top: 2rem; /* Space above the graph */
+}
+
+/* Container for graph elements */
+.graph-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack graph bars vertically */
+  gap: 1rem; /* Gap between graph bars */
+}
+
+/* Individual salary bar styling */
+.salary-bar {
+  position: relative; /* Position relative for tooltip and fill */
+  width: 100%; /* Full width of the container */
+  height: 50px; /* Fixed height for the bar */
+  background-color: #e5e7eb; /* Light background color for the bar */
+  border-radius: 0.5rem; /* Rounded corners */
+  overflow: hidden; /* Hide overflow to contain the fill */
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+/* Tooltip styling for salary bars */
+.salary-tooltip {
+  position: absolute; /* Absolute positioning relative to the salary bar */
+  right: 1rem; /* Position the tooltip 1rem from the right */
+  top: 50%; /* Vertically center the tooltip */
+  transform: translateY(-50%); /* Adjust the tooltip to be perfectly centered */
+  background-color: #1f2937; /* Dark background color for the tooltip */
+  color: white; /* White text color for readability */
+  padding: 0.25rem 0.5rem; /* Padding inside the tooltip */
+  border-radius: 0.25rem; /* Rounded corners */
+  font-size: 0.875rem; /* Smaller font size for the tooltip */
+  opacity: 0; /* Initially hide the tooltip */
+  transition: opacity 0.3s ease; /* Smooth transition for tooltip visibility */
+}
+
+/* Show tooltip on hover */
+.salary-bar:hover .salary-tooltip {
+  opacity: 1; /* Make the tooltip visible */
+}
+
+/* Fill of the salary bar indicating the percentage */
+.bar-fill {
+  position: absolute; /* Absolute positioning within the salary bar */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  height: 100%; /* Full height of the salary bar */
+  background: linear-gradient(135deg,#662D8C,#ED1E79); /* Gradient fill for the bar */
+}
+
+/* Label inside the salary bar */
+.bar-label {
+  position: absolute; /* Absolute positioning within the salary bar */
+  left: 1rem; /* Position the label 1rem from the left */
+  top: 50%; /* Vertically center the label */
+  transform: translateY(-50%); /* Adjust the label to be perfectly centered */
+  color: white; /* White text color for readability */
+  z-index: 1; /* Ensure the label appears above the fill */
+  font-weight: 500; /* Medium font weight */
+}
+
+/* 
+ * =====================================================
+ * Salary Bar Widths for Different Roles
+ * =====================================================
+ */
+
+/* Widths for Software Developer salary bars */
+.salary-bar[data-role="Software Developer"]:nth-child(1) .bar-fill { width: 50%; } /* Entry level */
+.salary-bar[data-role="Software Developer"]:nth-child(2) .bar-fill { width: 65%; } /* Junior level */
+.salary-bar[data-role="Software Developer"]:nth-child(3) .bar-fill { width: 80%; } /* Mid level */
+.salary-bar[data-role="Software Developer"]:nth-child(4) .bar-fill { width: 90%; } /* Senior level */
+.salary-bar[data-role="Software Developer"]:nth-child(5) .bar-fill { width: 100%; } /* Lead level */
+
+/* Widths for Embedded Systems Engineer salary bars */
+.salary-bar[data-role="Embedded Systems Engineer"]:nth-child(1) .bar-fill { width: 50%; } /* Entry level */
+.salary-bar[data-role="Embedded Systems Engineer"]:nth-child(2) .bar-fill { width: 65%; } /* Junior level */
+.salary-bar[data-role="Embedded Systems Engineer"]:nth-child(3) .bar-fill { width: 80%; } /* Mid level */
+.salary-bar[data-role="Embedded Systems Engineer"]:nth-child(4) .bar-fill { width: 90%; } /* Senior level */
+.salary-bar[data-role="Embedded Systems Engineer"]:nth-child(5) .bar-fill { width: 100%; } /* Lead level */
+
+/* Widths for Cybersecurity Analyst salary bars */
+.salary-bar[data-role="Cybersecurity Analyst"]:nth-child(1) .bar-fill { width: 50%; } /* Entry level */
+.salary-bar[data-role="Cybersecurity Analyst"]:nth-child(2) .bar-fill { width: 65%; } /* Junior level */
+.salary-bar[data-role="Cybersecurity Analyst"]:nth-child(3) .bar-fill { width: 80%; } /* Mid level */
+.salary-bar[data-role="Cybersecurity Analyst"]:nth-child(4) .bar-fill { width: 90%; } /* Senior level */
+.salary-bar[data-role="Cybersecurity Analyst"]:nth-child(5) .bar-fill { width: 100%; } /* Lead level */
+
+/* 
+ * =====================================================
+ * Text Boxes
+ * =====================================================
+ */
+
+/* Common styles for content boxes */
+.content-box {
+  padding: 2rem; /* Padding inside the box */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(236, 72, 153, 0.05)); /* Light gradient background */
+  border-radius: 1rem; /* Rounded corners */
+  border: 1px solid rgba(37, 99, 235, 0.1); /* Light border with transparency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for content boxes */
+.content-box:hover {
+  transform: translateY(-5px); /* Move the box slightly upward on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Enhance the shadow on hover */
+}
+
+/* Paragraph styling within content boxes */
+.content-box p {
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+  line-height: 1.8; /* Increased line height for better spacing */
+  color: #4b5563; /* Dark gray text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* 
+ * =====================================================
+ * Content Wrapper Adjustments
+ * =====================================================
+ */
+
+/* Wrapper for aligning content */
+.content-wrapper {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 1rem; /* Space between child elements */
+}
+
+/* Align content to the left */
+.content-wrapper.align-left {
+  justify-content: space-between; /* Distribute space between child elements */
+  align-items: flex-start; /* Align items to the start vertically */
+  flex-direction: row; /* Arrange items in a row */
+}
+
+/* Align content to the right */
+.content-wrapper.align-right {
+  justify-content: space-between; /* Distribute space between child elements */
+  align-items: flex-start; /* Align items to the start vertically */
+  flex-direction: row-reverse; /* Arrange items in a row in reverse order */
+}
+
+/* Text content area */
+.text-content {
+  flex: 1; /* Allow the text content to grow and fill available space */
+  max-width: 600px; /* Set a maximum width for readability */
+}
+
+/* Text content area within salaries section */
+.salaries .text-content {
+  flex: 1; /* Allow the text content to grow */
+  max-width: 1200px; /* Increase maximum width for larger screens */
+}
+
+/* 
+ * =====================================================
+ * Vertical Gallery Fixes
+ * =====================================================
+ */
+
+/* Container for vertical gallery */
+.vertical-gallery {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack images vertically */
+  gap: 2rem; /* Space between gallery items */
+  padding: 2rem; /* Padding around the gallery */
+  width: 400px; /* Fixed width for the gallery */
+}
+
+/* Individual gallery link */
+.vertical-gallery a {
+  margin-bottom: 100px; /* Space below each image */
+  position: relative; /* Position relative for overlay */
+  overflow: hidden; /* Hide overflow to contain the image and overlay */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Gallery link hover effect */
+.vertical-gallery a:hover {
+  transform: translateY(-5px); /* Move the image slightly upward on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Maintain shadow on hover */
+}
+
+/* Small gallery images */
+.gallery-image-small {
+  width: 100%; /* Make the image take full width of the container */
+  height: 200px; /* Fixed height for smaller images */
+  object-fit: contain; /* Ensure the entire image is visible without distortion */
+  padding: 1rem; /* Padding around the image */
+}
+
+/* Large gallery images */
+.gallery-image-large {
+  width: 100%; /* Make the image take full width of the container */
+  height: 400px; /* Fixed height for larger images */
+  object-fit: contain; /* Ensure the entire image is visible without distortion */
+  padding: 1rem; /* Padding around the image */
+}
+
+/* 
+ * =====================================================
+ * Image Overlay Adjustments
+ * =====================================================
+ */
+
+/* Overlay that appears on image hover */
+.image-overlay {
+  position: absolute; /* Absolute positioning relative to the gallery link */
+  bottom: 0; /* Align to the bottom of the image */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  padding: 1rem; /* Padding inside the overlay */
+  color: white; /* White text color for contrast */
+  opacity: 0; /* Initially hide the overlay */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transform: translateY(1rem); /* Position the overlay slightly below the image */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  margin: 0; /* Remove default margin */
+}
+
+/* Show the overlay when hovering over the gallery link */
+.vertical-gallery a:hover .image-overlay {
+  opacity: 1; /* Make the overlay visible */
+  transform: translateY(0); /* Move the overlay into view */
+}
+
+/* Title within the image overlay */
+.overlay-title {
+  font-size: 1rem; /* Font size for the overlay title */
+  font-weight: 600; /* Semi-bold font weight */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* 
+ * =====================================================
+ * Buttons
+ * =====================================================
+ */
+
+/* Common styles for buttons and call-to-action buttons */
+.button, .cta-button {
+  align-self: flex-start; /* Align the button to the start of the container */
+  display: inline-block; /* Allow padding and dimensions */
+  padding: 0.75rem 1.5rem; /* Padding inside the button */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background */
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: 500; /* Medium font weight */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  margin-top: 1rem; /* Space above the button */
+}
+
+/* Button hover effect */
+.button:hover, .cta-button:hover {
+  transform: translateY(-2px); /* Slight upward movement on hover */
+  background: #1d4ed8; /* Change background color on hover */
+}
+
+/* 
+ * =====================================================
+ * Sources Container
+ * =====================================================
+ */
+
+/* Container for the sources section */
+.sources-container {
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 4rem auto; /* Center the container with top and bottom margin */
+  padding: 0 2rem; /* Side padding */
+}
+
+/* Individual source section styling */
+.source-section {
+  background: #ffffff; /* White background */
+  border-radius: 1.5rem; /* Rounded corners */
+  padding: 2rem; /* Padding inside the section */
+  margin-bottom: 2rem; /* Space below each source section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Source section heading */
+.source-section h2 {
+  font-size: 2.5rem; /* Large font size for the heading */
+  font-weight: 700; /* Bold font weight */
+  margin-bottom: 2rem; /* Space below the heading */
+  background: linear-gradient(135deg, #2563eb, #ec4899); /* Gradient background for text */
+  -webkit-background-clip: text; /* Clip the background to the text (for WebKit browsers) */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+}
+
+/* 
+ * =====================================================
+ * Source List Styling
+ * =====================================================
+ */
+
+/* Remove default list styles */
+.source-list {
+  list-style: none; /* Remove bullet points */
+}
+
+/* Individual source item styling */
+.source-item {
+  padding: 2rem; /* Padding inside the source item */
+  border-radius: 1rem; /* Rounded corners */
+  margin-bottom: 1rem; /* Space below each source item */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(236, 72, 153, 0.05)); /* Light gradient background */
+  border: 1px solid rgba(37, 99, 235, 0.1); /* Light border with transparency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Source item hover effect */
+.source-item:hover {
+  transform: translateY(-5px); /* Move the item slightly upward on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Enhance the shadow on hover */
+}
+
+/* Source item link styling */
+.source-item a {
+  color: #2563eb; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 600; /* Semi-bold font weight */
+  font-size: 1.1rem; /* Font size for the link */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Source item link hover effect */
+.source-item a:hover {
+  color: #ec4899; /* Change link color on hover */
+}
+
+/* Paragraph within source items */
+.source-item p {
+  color: #6b7280; /* Paragraph text color */
+  margin-top: 0.5rem; /* Space above the paragraph */
+  font-size: 1rem; /* Font size for the paragraph */
+  line-height: 1.6; /* Line height for better readability */
+}

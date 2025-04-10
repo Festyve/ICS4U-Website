@@ -1,0 +1,132 @@
+<!-- 
+    Author: Michael Zhang
+    Date: 2024/11/19
+    HTML File for Main Page
+
+    Challenge Features: 
+    - Include an element that moves down as the user scrolls down
+    - Mouseover effects
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Meta Tags 
+        - charset: Defines the character encoding for the document
+        - viewport: Ensures the website is responsive on different devices
+    -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+    
+    <!-- 
+        Title of the webpage 
+    -->
+    <title>Careers in Computing</title> <!-- The title that appears in the browser tab -->
+    
+    <!-- 
+        Google Fonts Integration 
+        - Imports the Poppins font family with specified weights
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Links to the Poppins font from Google Fonts -->
+    
+    <!-- 
+        External CSS Stylesheet 
+        - Links the main CSS file for styling the webpage
+    -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the external stylesheet -->
+</head>
+<body>
+    <!-- 
+        Navigation Section 
+        - Contains the website logo and navigation links
+    -->
+    <nav>
+        <div class="nav-content"> <!-- Wrapper for navigation content -->
+            <!-- 
+                Logo 
+                - Serves as a link to the homepage
+            -->
+            <a href="index.html" class="logo">Careers In Computing</a> <!-- Website logo linking to the main page -->
+            
+            <!-- 
+                Navigation Links 
+                - Links to different sections/pages of the website
+            -->
+            <div class="nav-links"> <!-- Container for navigation links -->
+                <a href="computer_science.html">Computer Science</a> <!-- Link to Computer Science page -->
+                <a href="computer_engineering.html">Computer Engineering</a> <!-- Link to Computer Engineering page -->
+                <a href="information_technology.html">Information Technology</a> <!-- Link to Information Technology page -->
+                <a href="sources.html">Works Cited</a> <!-- Link to Works Cited page -->
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 
+        Hero Section 
+        - Highlights the main purpose of the website with a prominent heading and description
+    -->
+    <section class="hero"> <!-- Hero section with background and central content -->
+        <h1>Discover Your Path in Computing</h1> <!-- Main heading in the hero section -->
+        <p>Explore the diverse and rewarding world of technology careers through Computer Science, Computer Engineering, and Information Technology</p> <!-- Subheading or descriptive text -->
+    </section>
+
+    <!-- 
+        Overview Section 
+        - Provides information on why to choose a career in computing, including statistics and benefits
+    -->
+    <section class="overview"> <!-- Overview section detailing the benefits of computing careers -->
+        <h2>Why choose a Career in Computing?</h2> <!-- Section heading -->
+        <div class="content-wrapper align-left"> <!-- Wrapper for aligning content to the left -->
+            <div class="text-content"> <!-- Container for textual content -->
+                <div class="content-box"> <!-- Styled box for the paragraph -->
+                    <p>
+                        A job in computers offers competitive pay and substantial growth prospects. Employment in computer and 
+                        information technology occupations is expected to expand by 15% between 2021 and 2031, which is much faster 
+                        than the average for all occupations, according to the U.S. Bureau of Labour Statistics. The growing need 
+                        for big data, cloud computing, and information security is what's behind this spike. Furthermore, as of May 
+                        2023, the median yearly salary for these occupations was $104,420, which was much greater than the median for 
+                        all occupations.
+                    </p> <!-- Informative paragraph about career prospects in computing -->
+                </div>
+            </div>
+            <div class="vertical-gallery"> <!-- Container for vertical image gallery -->
+                <a href="https://the-telescope.com/projected-employment-for-computer-occupations-us-bureau-of-labor-statisti-png/"> <!-- Link wrapping the image and overlay -->
+                    <img src="images/demandstatistics.png" alt="The Telescope" class="gallery-image-large"> <!-- Gallery image -->
+                    <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                        <h3 class="overlay-title">The Telescope, an independant newspaper</h3> <!-- Overlay title -->
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 
+        Fields Overview Section 
+        - Displays different fields within computing with descriptions and exploration buttons
+    -->
+    <section class="fields-grid"> <!-- Grid layout for different computing fields -->
+        <div class="field-card"> <!-- Card for Computer Science -->
+            <h3>Computer Science</h3> <!-- Field title -->
+            <p>
+                Focus on software development, algorithms, and theoretical foundations of computing. Perfect for those interested in programming and problem-solving.
+            </p> <!-- Field description -->
+            <a href="computer_science.html" class="button">Explore</a> <!-- Button to explore Computer Science -->
+        </div>
+        <div class="field-card"> <!-- Card for Computer Engineering -->
+            <h3>Computer Engineering</h3> <!-- Field title -->
+            <p>
+                Combine hardware and software knowledge to design and develop computer systems and components. Ideal for those interested in both hardware and software.
+            </p> <!-- Field description -->
+            <a href="computer_engineering.html" class="button">Explore</a> <!-- Button to explore Computer Engineering -->
+        </div>
+        <div class="field-card"> <!-- Card for Information Technology -->
+            <h3>Information Technology</h3> <!-- Field title -->
+            <p>
+                Manage and maintain computer systems, networks, and databases. Great for those who want to support technology infrastructure.
+            </p> <!-- Field description -->
+            <a href="information_technology.html" class="button">Explore</a> <!-- Button to explore Information Technology -->
+        </div>
+    </section>
+</body>
+</html>

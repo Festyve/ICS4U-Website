@@ -1,0 +1,416 @@
+<!-- 
+    Author: Michael Zhang
+    Date: 2024/11/19
+    HTML File for Computer Science Webpage
+
+    Challenge Features: 
+    - Include an element that moves down as the user scrolls down
+    - Mouseover effects
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Meta Tags 
+        - charset: Defines the character encoding for the document
+        - viewport: Ensures the website is responsive on different devices
+    -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+    
+    <!-- 
+        Title of the webpage 
+    -->
+    <title>Careers In Computing</title> <!-- The title that appears in the browser tab -->
+    
+    <!-- 
+        External CSS Stylesheet 
+        - Links the main CSS file for styling the webpage
+    -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the external stylesheet -->
+    
+    <!-- 
+        Google Fonts Integration 
+        - Imports the Poppins font family with specified weights
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> <!-- Links to the Poppins font from Google Fonts -->
+</head>
+<body>
+    <!-- 
+        Navigation Section 
+        - Contains the website logo and navigation links
+    -->
+    <nav class="main-nav"> <!-- Main navigation bar with fixed positioning -->
+        <div class="nav-content"> <!-- Wrapper for navigation content -->
+            <!-- 
+                Logo 
+                - Serves as a link to the homepage
+            -->
+            <a href="index.html" class="logo">Careers In Computing</a> <!-- Website logo linking to the main page -->
+            
+            <!-- 
+                Navigation Links 
+                - Links to different sections/pages of the website
+            -->
+            <div class="nav-links"> <!-- Container for navigation links -->
+                <a href="computer_science.html" class="active">Computer Science</a> <!-- Active link to Computer Science page -->
+                <a href="computer_engineering.html">Computer Engineering</a> <!-- Link to Computer Engineering page -->
+                <a href="information_technology.html">Information Technology</a> <!-- Link to Information Technology page -->
+                <a href="sources.html">Works Cited</a> <!-- Link to Works Cited page -->
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 
+            Hero Section 
+            - Highlights the Computer Science careers with a prominent heading and description
+        -->
+        <section class="hero"> <!-- Hero section with background and central content -->
+            <h1>Computer Science Careers</h1> <!-- Main heading in the hero section -->
+            <p>From software development to artificial intelligence, discover the diverse opportunities in computer science.</p> <!-- Subheading or descriptive text -->
+        </section>
+        
+        <!-- 
+            Definition Section 
+            - Provides an overview of what Computer Science entails
+        -->
+        <section class="definition"> <!-- Definition section detailing Computer Science -->
+            <h2>What is Computer Science?</h2> <!-- Section heading -->
+            <div class="content-wrapper"> <!-- Wrapper for aligning text and video content -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraph -->
+                        <p>
+                            Computer Science is the study of computation, algorithms and everything about the function and design of 
+                            computers. It covers all aspects of computing such as developing software, processing information and solving
+                            complex problems. Computer Science combines problem-solving skills with technical knowledge to create new 
+                            technologies and improve existing ones.
+                        </p> <!-- Informative paragraph about Computer Science -->
+                    </div>
+                </div>
+                <div class="video-content"> <!-- Container for embedded video content -->
+                    <!-- 
+                        Embedded YouTube Video 
+                        - Provides a visual explanation of Computer Science
+                        - iframe code sourced from YouTube's Embed feature
+                    -->
+                    <iframe width="600" height="340" src="https://www.youtube.com/embed/HsXaVV6fFDY" title="Unplugged - What is Computer 
+                    Science?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                    picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+            Education Requirements Section 
+            - Outlines the educational background needed for Computer Science careers
+        -->
+        <section class="education"> <!-- Education requirements section -->
+            <h2>Education Requirements</h2> <!-- Section heading -->
+            <div class="content-wrapper align-right"> <!-- Wrapper with content aligned to the right -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraphs -->
+                        <p>
+                            Computer Science jobs typically will require a solid educational background. As such, most positions require
+                            a four-year university degree. This is because they show that the candidate has a comprehensive 
+                            understanding of essential practical and theoretical concepts for computer science.
+                        </p> <!-- Paragraph about the importance of a university degree -->
+                        <br><br>
+                        <p>
+                            Universities offer thorough computer science programs that teach concepts such as software
+                            development, computer architecture, programming languages, data structures, algorithms, etc. Students 
+                            gain practical experience with these concepts through creating projects, participating in co-op programs and
+                            assisting with research. These experiences help students land jobs by giving students the knowledge 
+                            required to start building strong portfolios to impress potential employers, as well as the opportunities
+                            to build close connections with others in the field.
+                        </p> <!-- Paragraph on university programs and practical experience -->
+                        <br><br>
+                        <p>
+                            Though it is the standard to have a university degree, it is not always necessary. In fact, many successful
+                            people with careers in computer science have educational backgrounds with online courses and bootcamps. To
+                            supplement this lack of a university degree, these candidates typically have certifications from platforms such
+                            as Coursera or edX and great experience in hackathons, open-source projects or building personal projects.
+                            This hands-on experience is just as valuable as a formal education.
+                        </p> <!-- Paragraph on alternative educational paths -->
+                        <br>
+                        <p>On the left, there are links to three of Canada's most prestigious university Computer Science programs.</p> <!-- Instructional paragraph -->
+                    </div>
+                </div>
+                <div class="vertical-gallery"> <!-- Container for vertical image gallery with university links -->
+                    <!-- 
+                        University of Waterloo Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://uwaterloo.ca/future-students/programs/computer-science"> <!-- Link to University of Waterloo Computer Science program -->
+                        <img src="images/uwaterloo.png" alt="University of Waterloo" class="gallery-image-small"> <!-- University logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">The University of Waterloo</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                    
+                    <!-- 
+                        University of Toronto Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://future.utoronto.ca/undergraduate-programs/computer-science/"> <!-- Link to University of Toronto Computer Science program -->
+                        <img src="images/uft.png" alt="University of Toronto" class="gallery-image-small"> <!-- University logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">The University of Toronto</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                    
+                    <!-- 
+                        Toronto Metropolitan University Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://www.torontomu.ca/programs/undergraduate/computer-science/"> <!-- Link to Toronto Metropolitan University Computer Science program -->
+                        <img src="images/tmu.jpg" alt="Toronto Metropolitan University" class="gallery-image-small"> <!-- University logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">Toronto Metropolitan University</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Internships and Early Work Experience Section 
+            - Highlights the importance of internships and early work experience in Computer Science careers
+        -->
+        <section class="experience"> <!-- Internships and early work experience section -->
+            <h2>Internships and Early Work Experience</h2> <!-- Section heading -->
+            <div class="content-wrapper align-left"> <!-- Wrapper with content aligned to the left -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraphs -->
+                        <p>
+                            Job experience is the most crucial factor for securing a job in the computer science field. Even with 
+                            a formal education, it can still be difficult to find a job without prior experience. Gaining practical
+                            experience through internships and other early work experience opportunities is fundamental for aspiring
+                            computer scientists. Internships and co-op opportunities provide hands-on experience with software 
+                            development, problem-solving, programming languages and other similar concepts. They also provide
+                            invaluable networking opportunities and insights into standard industry practices.
+                        </p> <!-- Paragraph on the importance of job experience -->
+                        <br><br>
+                        <p>
+                            Besides internships, some of the easiest ways to gain early work experience include building personal
+                            projects, contributing to open-source software and participating in online programming contests.
+                        </p> <!-- Paragraph on alternative ways to gain experience -->
+                        <br><br>
+                        <p>On the right, there are links to free resources to help you gain early work experience.</p> <!-- Instructional paragraph -->
+                    </div>
+                </div>
+                <div class="vertical-gallery"> <!-- Container for vertical image gallery with resource links -->
+                    <!-- 
+                        LeetCode Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://leetcode.com/"> <!-- Link to LeetCode -->
+                        <img src="images/leetcode.png" alt="LeetCode" class="gallery-image-small"> <!-- LeetCode logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">LeetCode</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                    
+                    <!-- 
+                        Code Academy Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://www.codecademy.com/"> <!-- Link to Code Academy -->
+                        <img src="images/codeacademy.jpg" alt="Code Academy" class="gallery-image-small"> <!-- Code Academy logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">Code Academy</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                    
+                    <!-- 
+                        Harvard CS50 Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science"> <!-- Link to Harvard CS50 course -->
+                        <img src="images/cs50.png" alt="CS50" class="gallery-image-small"> <!-- CS50 logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">Harvard Intro to Computer Science</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- 
+            Career Spotlight Section 
+            - Focuses on the role of a Software Developer
+        -->
+        <section class="job"> <!-- Career spotlight section for Software Developer -->
+            <h2>Career Spotlight: Software Developer</h2> <!-- Section heading -->
+            <div class="content-wrapper align-right"> <!-- Wrapper with content aligned to the right -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraphs -->
+                        <p>
+                            Software developers design, build, and oversee software solutions that meet particular user needs and 
+                            corporate goals. Their responsibilities encompass all stages of the software development lifecycle, 
+                            from early design and coding to debugging and application release. Software developers, who are 
+                            proficient in a number of programming languages, such as Java, Python, C++, and JavaScript, commonly 
+                            use development frameworks and tools to streamline their job.
+                        </p> <!-- Paragraph on the role and responsibilities of Software Developers -->
+                        <br><br>
+                        <p>
+                            Working with stakeholders to collect requirements and turn them into software that is scalable, effective, 
+                            and functional is a crucial part of their job. This process includes creating a system design, writing 
+                            understandable and maintainable code, and integrating third-party libraries or APIs to increase 
+                            functionality. In addition to meeting technical requirements and client expectations, software developers 
+                            must make sure their solutions work on a variety of platforms and devices.
+                        </p> <!-- Paragraph on collaborating with stakeholders and ensuring software functionality -->
+                        <br><br>
+                        <p>
+                            Software developers put a lot of effort into testing and debugging in addition to designing code to 
+                            guarantee performance and dependability. To find and fix flaws, enhance performance, and protect data, 
+                            they run both automated and manual tests. As part of regular software maintenance, developers frequently 
+                            apply updates and patches to make sure the product keeps up with emerging technology and user needs. 
+                            Innovative solutions that propel digital transformation are produced by software developers that blend 
+                            technical know-how with creativity and problem-solving skills.
+                        </p> <!-- Paragraph on testing, debugging, and maintaining software -->
+                        <br>
+                        <p>On the left are technologies commonly used by software engineers during their job.</p> <!-- Instructional paragraph -->
+                    </div>
+                </div>
+                <div class="vertical-gallery"> <!-- Container for vertical image gallery with technology links -->
+                    <!-- 
+                        Stack Overflow Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://stackoverflow.com/"> <!-- Link to Stack Overflow -->
+                        <img src="images/stackoverflow.webp" alt="Stack Overflow" class="gallery-image-large"> <!-- Stack Overflow logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">Stack Overflow</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                    
+                    <!-- 
+                        GitHub Link 
+                        - Image with overlay title
+                    -->
+                    <a href="https://github.com/"> <!-- Link to GitHub -->
+                        <img src="images/github.webp" alt="GitHub" class="gallery-image-large"> <!-- GitHub logo image -->
+                        <div class="image-overlay"> <!-- Overlay that appears on hover -->
+                            <h3 class="overlay-title">GitHub</h3> <!-- Overlay title -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- 
+            Day In The Life Section 
+            - Provides an inside look into a Software Developer's daily routine
+        -->
+        <section class="day-in-life"> <!-- Day in the life section -->
+            <h2>Day In The Life: A Software Developer</h2> <!-- Section heading -->
+            <div class="content-wrapper align-right"> <!-- Wrapper with content aligned to the right -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraphs -->
+                        <p>
+                            Software developers usually begin their days by planning their activities for the day, 
+                            evaluating project management tools, and checking their emails. Software Developers 
+                            frequently attend stand-up meetings to discuss current objectives and advancements. After 
+                            that, they concentrate on writing, debugging, or adding new features while making sure 
+                            their efforts complement the project's goals. Through code reviews, pair programming, or 
+                            strategic talks, cooperation with coworkers and stakeholders is essential. The day strikes 
+                            a balance between innovative implementation and technical problem-solving, bolstered by 
+                            frequent updates and ongoing education.
+                        </p> <!-- Paragraph describing a typical day for a Software Developer -->
+                        <br>
+                        <p><strong>Experience it for yourself:</strong> Watch this informative video from Indeed for an inside look 
+                            at the daily life of a software developer!</p> <!-- Invitation to watch an informative video -->
+                    </div>
+                </div>
+                <div class="video-content"> <!-- Container for embedded video content -->
+                    <br><br><br><br>
+                    <!-- 
+                        Embedded YouTube Video 
+                        - Provides a visual insight into a Software Developer's daily routine
+                        - iframe code sourced from YouTube's Embed feature
+                    -->
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/1LSXEC0Clow" title="A Day in the Life of 
+                    a Software Engineer | Indeed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Embedded YouTube video -->
+                </div>
+            </div>
+        </section>
+    
+        <!-- 
+            Salaries Section 
+            - Displays the salary progression of a Software Developer
+        -->
+        <section class="salaries"> <!-- Salaries progression section -->
+            <h2>Salary Progression of a Software Developer</h2> <!-- Section heading -->
+            <br>
+            <div class="content-wrapper"> <!-- Wrapper for textual content -->
+                <div class="text-content"> <!-- Container for textual content -->
+                    <div class="content-box"> <!-- Styled box for the paragraph -->
+                        <p>
+                            The salary of a software developer evolves significantly over the course of their career, often tied to 
+                            their experience, role, and specialization. The graph below shows how the salary of a software 
+                            developer changes as their years of experience increase. Other factors such as location, industry demand, 
+                            and technical expertise can also further accelerate salary progression.
+                        </p> <!-- Paragraph introducing the salary progression graph -->
+                    </div>
+                </div>
+            </div>
+            <div class="salary-graph"> <!-- Container for the salary graph -->
+                <div class="graph-container"> <!-- Wrapper for individual salary bars -->
+                    <!-- 
+                        Salary Bar for Software Developer - Starting Salary 
+                        - Represents 0-2 years of experience
+                    -->
+                    <div class="salary-bar" data-role="Software Developer"> <!-- Salary bar with role data attribute -->
+                        <div class="bar-fill"></div> <!-- Fill indicating the salary range -->
+                        <div class="bar-label">Starting Salary (0-2 years of experience)</div> <!-- Label for the salary range -->
+                        <div class="salary-tooltip">$74,500-$89,060 USD</div> <!-- Tooltip displaying exact salary range -->
+                    </div>
+                    
+                    <!-- 
+                        Salary Bar for Software Developer - Mid Level 
+                        - Represents 3-5 years of experience
+                    -->
+                    <div class="salary-bar" data-role="Software Developer"> <!-- Salary bar with role data attribute -->
+                        <div class="bar-fill"></div> <!-- Fill indicating the salary range -->
+                        <div class="bar-label">Mid Level (3-5 years of experience)</div> <!-- Label for the salary range -->
+                        <div class="salary-tooltip">$92,744 - $113,243 USD</div> <!-- Tooltip displaying exact salary range -->
+                    </div>
+                    
+                    <!-- 
+                        Salary Bar for Software Developer - Senior/Staff 
+                        - Represents 5-6 years of experience
+                    -->
+                    <div class="salary-bar" data-role="Software Developer"> <!-- Salary bar with role data attribute -->
+                        <div class="bar-fill"></div> <!-- Fill indicating the salary range -->
+                        <div class="bar-label">Senior/Staff Software Engineer (5-6 years of experience) </div> <!-- Label for the salary range -->
+                        <div class="salary-tooltip">$115,900 - $138,614 USD</div> <!-- Tooltip displaying exact salary range -->
+                    </div>
+                    
+                    <!-- 
+                        Salary Bar for Software Developer - Principal Engineer 
+                        - Represents usually 10+ years of experience
+                    -->
+                    <div class="salary-bar" data-role="Software Developer"> <!-- Salary bar with role data attribute -->
+                        <div class="bar-fill"></div> <!-- Fill indicating the salary range -->
+                        <div class="bar-label">Principal Engineer (Usually 10+ years of experience) </div> <!-- Label for the salary range -->
+                        <div class="salary-tooltip">$136,887 - $162,463 USD</div> <!-- Tooltip displaying exact salary range -->
+                    </div>
+                    
+                    <!-- 
+                        Salary Bar for Software Developer - Distinguished Engineer/Fellow 
+                        - Represents highest salary tier
+                    -->
+                    <div class="salary-bar" data-role="Software Developer"> <!-- Salary bar with role data attribute -->
+                        <div class="bar-fill"></div> <!-- Fill indicating the salary range -->
+                        <div class="bar-label">Distinguished Engineer/Fellow Salary</div> <!-- Label for the salary range -->
+                        <div class="salary-tooltip">$160,021 - $192,898 USD</div> <!-- Tooltip displaying exact salary range -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
